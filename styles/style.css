@@ -1,0 +1,267 @@
+/* Global reset */
+/*DEVELOPER: Jeisson Arciniegas IS117-xxx, Semester, Year */
+* {
+    margin: 0;
+    padding: 0;
+}
+/* Style for the pop-up effect links */
+a.pop-up-link {
+    text-decoration: none; /* Remove underline */
+    color: rgb(8, 0, 236); /* Default link color */
+    font-weight: bold; /* Bold text */
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out; /* Smooth scaling and color transition */
+}
+
+a.pop-up-link:hover {
+    transform: scale(1.2); /* Enlarge link on hover */
+    color: rgb(255, 69, 0); /* Change color on hover */
+    text-decoration: underline; /* Add underline */
+}
+
+/* Page and body styles */
+html{
+    background-image: url('../images/background-aqua.jpg');
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-size: cover; /* Make the image cover the entire background */
+    background-position: center; /* Center the image */
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+body {
+    font-family: 'Fredoka One', sans-serif;
+    font-size: 100%;
+    width: 800px;
+    margin: 0 auto;
+    border: 3px solid rgb(8, 0, 236);
+    background-color: rgb(0, 137, 222);
+   
+}
+img {
+    max-width: 100%; /* Image will not exceed the width of its container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+
+/* Styles for the navigation menu */
+#nav_menu ul {
+    list-style-type: none; /* This removes the bullet points */
+    margin: 0;
+    padding: 0;
+    position: relative;
+    display:flex;
+    justify-content: center;
+}
+
+#nav_menu ul li {
+    float: 1;
+    position: relative;
+}
+
+#nav_menu ul li a {
+    display: block;
+    width: 160px;
+    text-align: center;
+    padding: 1em 0;
+    text-decoration: none;
+    background-color: rgb(8, 0, 236);
+    color: white;
+    font-weight: bold;
+    transition: transform 0.3s ease-in-out, border 0.3s ease-in-out;
+     /* Add an invisible border 
+    transition: transform 0.3s ease-in-out, border 0.3s ease-in-out; /* Smooth transition for the scale effect and border */
+}
+/* When the link is hovered, add a border and scale up */
+#nav_menu ul li a:hover {
+    transform: scale(1.2); /* Bubble effect on hover */
+    border: 2px solid white; /* Add a white border when hovering */
+    box-sizing: border-box; /* Ensures the border does not affect the layout */
+}
+
+/*#nav_menu a.current {
+    color: yellow;
+}*/
+
+#nav_menu ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgb(8, 0, 236);
+    padding: 0;
+    
+}
+
+#nav_menu ul ul li {
+   
+    width: auto;
+}
+
+#nav_menu ul li:hover > ul {
+    display: block;
+}
+
+#nav_menu ul ul li a {
+    padding: 0.75em;
+    text-align: left;
+}
+
+#nav_menu > ul::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+#nav_menu ul li a:hover {
+    transform: scale(1.2); /* Increase size of button when hovered */
+}
+section {
+	width: 525px;
+	float: right;
+	padding: 0 20px 20px 20px;
+}
+section h1 {
+	font-size: 150%;
+	padding: .5em 0 .25em 0;
+	margin: 0;
+}
+section h2 {
+	color: white;
+	font-size: 130%;
+	padding: .5em 0 .25em 0;
+}
+section p {
+	padding-bottom: .5em;
+}
+section blockquote {
+	padding: 0 2em;
+	font-style: italic;
+}
+section ul {
+	padding: 0 0 .25em 1.25em;
+	list-style-type: circle;
+}
+section li {
+	padding-bottom: .35em;
+}
+
+/* the styles for the article */
+article {
+	padding: .5em 0;
+	
+	border-bottom: 2px solid rgb(8, 0,236 );
+}
+article h2 {
+	padding-top: 0;
+}
+article h3 {
+	font-size: 105%;
+	padding-bottom: .25em;
+}
+article img {
+	float: right;
+	margin: .5em 0 1em 1em;
+	border: 1px solid black;
+}
+
+/* the styles for the aside */
+.aside-container img {
+    display: block;        /* Makes the image a block element */
+    margin: 0 auto;        /* Centers the image horizontally */
+    max-width: 100%;       /* Ensures the image is responsive */
+    height: auto;          /* Maintains the aspect ratio */
+}
+
+aside {
+	width: 215px;
+	float: right;
+	padding: 0 0 20px 20px;
+}
+aside h2 {
+	color: #800000;
+	font-size: 130%;
+	padding: .5em 0 .25em 0;
+}
+
+aside h3 {
+	font-size: 105%;
+	padding-bottom: .25em;
+}
+aside img {
+	padding-bottom: 1em;
+}
+
+/* the styles for the footer */
+footer {
+	background-color: rgb(8, 0, 236);
+	clear: both;
+
+}
+footer p {
+	text-align: center;
+	color: white;
+	padding: 1em 0;
+}
+
+/* Responsive design using media queries */
+@media (max-width: 100px) {
+    body {
+        font-size: 90%;
+    }
+
+    #nav_menu ul {
+        flex-direction: column; /* Stack navigation on smaller screens */
+        align-items: center;
+    }
+
+    #nav_menu ul li {
+        position: relative;
+        flex: 1; /* Allow list items to take equal width */
+    }
+
+    section {
+        padding: 10px;
+    }
+
+    
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 85%;
+    }
+
+    #nav_menu ul li a {
+        padding: 0.75em;
+    }
+
+    aside {
+        width: 215px; /* Keep the desired width */
+        float: left; /* Change from `right` to `left` */
+        padding: .5em 0 .25em 0; /* Adjust padding for the left position */
+        margin-left:15px;
+    }
+
+    section {
+        order: 1; /* Place section above aside on small screens */
+    }
+
+    aside {
+        order: 2;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 75%;
+    }
+
+    #nav_menu ul li a {
+        padding: 0.5em;
+        font-size: 0.9em;
+    }
+
+    section {
+        padding: 20px;
+    }
+}

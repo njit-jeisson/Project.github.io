@@ -1,0 +1,287 @@
+/* Global reset */
+/*DEVELOPER: Jeisson Arciniegas, IS117-xxx, Semester, Year */
+* {
+    margin: 0;
+    padding: 0;
+}
+/* Style for the pop-up effect links */
+a.pop-up-link {
+    text-decoration: none; /* Remove underline */
+    color: rgb(8, 0, 236); /* Default link color */
+    font-weight: bold; /* Bold text */
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out; /* Smooth scaling and color transition */
+}
+
+a.pop-up-link:hover {
+    transform: scale(1.2); /* Enlarge link on hover */
+    color: rgb(255, 69, 0); /* Change color on hover */
+    text-decoration: underline; /* Add underline */
+}
+input{
+    font-family: 'Fredoka One', sans-serif;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+button{
+
+    margin-top: 20px;
+    font-family: 'Fredoka One', sans-serif;
+    font-size: 30;
+}
+
+
+/* Page and body styles */
+html{
+    background-image: url('../images/background-aqua.jpg');
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-size: cover; /* Make the image cover the entire background */
+    background-position: center; /* Center the image */
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+body {
+    font-family: 'Fredoka One', sans-serif;
+    font-size: 100%;
+    width: 800px;
+    margin: 0 auto;
+    border: 3px solid rgb(8, 0, 236);
+    background-color: rgb(0, 137, 222);
+    
+   
+}
+.container {
+    padding: 20px; /* Adds padding to the container */
+}
+
+form {
+    padding: 20px; /* Adds padding inside the form */
+}
+
+img {
+    max-width: 100%; /* Image will not exceed the width of its container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+
+/* Styles for the navigation menu */
+#nav_menu ul {
+    list-style-type: none; /* This removes the bullet points */
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+#nav_menu ul li {
+    float: left;
+    position: relative;
+}
+
+#nav_menu ul li a {
+    display: block;
+    width: 160px;
+    text-align: center;
+    padding: 1em 0;
+    text-decoration: none;
+    background-color: rgb(8, 0, 236);
+    color: white;
+    font-weight: bold;
+     /* Add an invisible border 
+    transition: transform 0.3s ease-in-out, border 0.3s ease-in-out; /* Smooth transition for the scale effect and border */
+}
+/* When the link is hovered, add a border and scale up */
+#nav_menu ul li a:hover {
+    transform: scale(1.2); /* Bubble effect on hover */
+    border: 2px solid white; /* Add a white border when hovering */
+    box-sizing: border-box; /* Ensures the border does not affect the layout */
+}
+
+/*#nav_menu a.current {
+    color: yellow;
+}*/
+
+#nav_menu ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    
+}
+
+#nav_menu ul ul li {
+    float: none;
+    width: 160px;
+}
+
+#nav_menu ul li:hover > ul {
+    display: block;
+}
+
+#nav_menu ul ul li a {
+    padding: 0.75em;
+    text-align: left;
+}
+
+#nav_menu > ul::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+#nav_menu ul li a:hover {
+    transform: scale(1.2); /* Increase size of button when hovered */
+}
+
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.form-group input {
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+}
+
+form .btn {
+    padding: 0.75rem;
+    background-color: rgb(255, 69, 0);
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+section {
+	width: 525px;
+	float: right;
+	padding: 0 20px 20px 20px;
+}
+section h1 {
+	font-size: 150%;
+	padding: .5em 0 .25em 0;
+	margin: 0;
+}
+section h2 {
+	color: white;
+	font-size: 130%;
+	padding: .5em 0 .25em 0;
+}
+section p {
+	padding-bottom: .5em;
+}
+section blockquote {
+	padding: 0 2em;
+	font-style: italic;
+}
+section ul {
+	padding: 0 0 .25em 1.25em;
+	list-style-type: circle;
+}
+section li {
+	padding-bottom: .35em;
+}
+
+/* the styles for the article */
+article {
+	padding: .5em 0;
+	border-top: 2px solid rgb(8, 0, 236);
+	border-bottom: 2px solid rgb(8, 0,236 );
+}
+article h2 {
+	padding-top: 0;
+}
+article h3 {
+	font-size: 105%;
+	padding-bottom: .25em;
+}
+article img {
+	float: left;
+	margin: .5em 0 1em 1em;
+	border: 1px solid black;
+}
+
+/* the styles for the aside */
+aside {
+    width: 215px; /* Keep the desired width */
+    float: left; /* Change from `right` to `left` */
+    padding: .5em 0 .25em 0; /* Adjust padding for the left position */
+    margin-left:15px;
+}   
+
+aside h1{
+    font-size: 200%;
+    margin-bottom: 30px;
+    float:left
+}
+
+aside h2 {
+	color: white;
+	font-size: 150%;
+    margin-bottom: 15px;
+	
+    
+}
+
+aside h3 {
+	font-size: 105%;
+	padding-bottom: .25em;
+}
+aside img {
+	padding-bottom: 1em;
+}
+form .btn:hover {
+    background-color: white;
+    color: rgb(255, 69, 0);
+}
+/* the styles for the footer */
+footer {
+	background-color: rgb(8, 0, 236);
+	clear: both;
+
+}
+footer p {
+	text-align: center;
+	color: white;
+	padding: 1em 0;
+}
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+    body {
+        font-size: 0.9rem;
+    }
+
+    .contact-container {
+        padding: 1rem;
+    }
+
+    form .btn {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header .logo {
+        width: 150px;
+    }
+
+    form .btn {
+        padding: 0.5rem;
+    }
+}
